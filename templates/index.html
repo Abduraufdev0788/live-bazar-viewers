@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Bazar - Oson va Tez Bozor</title>
+    <style>
+        /* === Umumiy sozlamalar === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #09ff00ff, #1eb700ff);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 70px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: 0.3s;
+        }
+
+        .nav-links a {
+            position: relative;
+            text-decoration: none;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: 0.3s;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* === Hero bo‘limi === */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 30px;
+            background: #007bff;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* === Uchta asosiy bo‘lim === */
+        .sections {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 80px 20px;
+        }
+
+        .card {
+            background: white;
+            width: 320px;
+            padding: 40px 25px;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🛍️ Live Bazar</div>
+        <nav class="nav-links">
+            <a href="#">Bozorga kirish</a>
+            <a href="#">Sotuvchi bo‘lish</a>
+            <a href="#">Support</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Oson bozor — qulay narxlar bilan</h1>
+            <p>Live Bazar’da kiyim-kechak, maishiy texnika va ko‘plab mahsulotlar sizni kutmoqda.</p>
+            <button class="btn">Bozorga kirish</button>
+        </div>
+    </section>
+
+    <section class="sections">
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png" alt="Market">
+            <h3>Bozorga kirish</h3>
+            <p>Mahsulotlar va narxlarni onlayn tarzda ko‘rib chiqing. Sizga yaqin bozorni toping!</p>
+            <button class="btn">Kirish</button>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/4862/4862440.png" alt="Seller">
+            <h3>Sotuvchi bo‘lish</h3>
+            <p>O‘zingizning mahsulotlaringizni joylashtiring va minglab xaridorlarga yeting!</p>
+            <button class="btn">Ro‘yxatdan o‘tish</button>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/6963/6963705.png" alt="Support">
+            <h3>Yordam markazi</h3>
+            <p>Muammolaringizni hal qilish uchun bizning support jamoamiz bilan bog‘laning.</p>
+            <button class="btn">Aloqa</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Live Bazar | Barcha huquqlar himoyalangan.</p>
+    </footer>
+</body>
+</html>
