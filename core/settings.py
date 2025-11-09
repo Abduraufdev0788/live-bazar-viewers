@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'livebazar.apps.LivebazarConfig',
+    'markets.apps.MarketsConfig'
 ]
 
 MIDDLEWARE = [
